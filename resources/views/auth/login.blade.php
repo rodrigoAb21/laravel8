@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('plantilla/assets/images/favicon.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('img/firestill-logo2.png')}}">
     <title>Login</title>
     <!-- Bootstrap Core CSS -->
     <link href="{{asset('plantilla/assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -17,7 +17,7 @@
     <link href="{{asset('plantilla/material/css/style.css')}}" rel="stylesheet">
     <!-- You can change the theme colors from here -->
     <link href="{{asset('plantilla/material/css/colors/megna.css')}}" id="theme" rel="stylesheet">
-<![endif]-->
+
 </head>
 
 <body>
@@ -35,9 +35,12 @@
         <div class="login-register">
             <div class="login-box card">
             <div class="card-body">
+                <div class="text-center">
+                    <img src="{{asset('img/firestill-logo.png')}}" height="100px" alt="logo">
+                </div>
                 <form class="form-horizontal form-material" id="loginform" method="POST" action="{{ route('login') }}" autocomplete="off">
                     {{ csrf_field() }}
-                    <h3 class="box-title m-b-20">Iniciar Sesion</h3>
+                    <h3 class="box-title m-b-20 text-center">Iniciar Sesión</h3>
                     <div class="form-group ">
                         <div class="col-xs-12">
                             <input class="form-control" name="email" type="email" required placeholder="Email">
@@ -45,12 +48,12 @@
                     </div>
                     <div class="form-group">
                         <div class="col-xs-12">
-                            <input class="form-control" name="password" type="password" required placeholder="Password">
+                            <input class="form-control" name="password" type="password" required placeholder="Contraseña">
                         </div>
                     </div>
                     <div class="form-group text-center m-t-20">
                         <div class="col-xs-12">
-                            <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Aceptar</button>
+                            <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" style="background: #b80000; border-color: #b80000" type="submit">Aceptar</button>
                         </div>
                     </div>
                 </form>
