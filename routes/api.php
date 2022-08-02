@@ -14,8 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->group(function () {
+Route::post('/login', 'Api\AuthController@login');
 
+Route::middleware('auth:sanctum')->group(function () {
+    Route::post('/logout', 'Api\AuthController@logout');
+    Route::get('/user', 'Api\AuthController@user');
+    Route::resource('/trabajadores', 'Api\TrabajadorController');
 });
-Route::resource('trabajadores', 'Api\TrabajadorController');
-
