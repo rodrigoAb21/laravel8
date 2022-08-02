@@ -34,7 +34,6 @@ class CreateTrabajadorTable extends Migration
             $table->string('tipo');
             $table->string('email')->unique();
             $table->string('password');
-            $table->softDeletes();
             $table->rememberToken();
         });
 
